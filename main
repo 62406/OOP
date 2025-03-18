@@ -1,0 +1,26 @@
+package com.mycompany.arraylist;
+import java.util.ArrayList;
+/**i
+ *
+ * @author UK Laptop
+ */
+public class ListEmployees {
+    public static void main(String[] args) {
+        ArrayList<Employee> employees = new ArrayList<>();
+
+        employees.add(new Employee("Sara", 40000));
+        employees.add(new Employee("Noor", 50000));
+        employees.add(new Employee("Zara", 60000));
+
+        System.out.println("Employee details:");
+        for (Employee e : employees) {
+            e.displayInfo();
+        }
+
+        employees.remove(1);
+        System.out.println("\nEmployee details after removal:");
+        for (Employee e : employees) {
+            e.displayInfo();
+        }
+    }
+}
